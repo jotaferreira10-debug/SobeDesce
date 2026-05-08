@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobe e Desce - Score Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Setup Screen -->
+    <div id="setupScreen" class="screen">
+        <div class="container setup-container">
+            <h1>Sobe e Desce</h1>
+            <p class="subtitle">Game Score Tracker</p>
+            
+            <div class="setup-form">
+                <label for="playerCount">Number of Players (4-5):</label>
+                <select id="playerCount">
+                    <option value="4">4 Players</option>
+                    <option value="5">5 Players</option>
+                </select>
+                
+                <label for="startingScore">Starting Score:</label>
+                <input type="number" id="startingScore" value="25" min="1" max="100">
+                
+                <div id="playersInput"></div>
+                
+                <button id="startGameBtn" class="btn-primary">Start Game</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="gameScreen" class="screen hidden">
+        <div class="container game-container">
+            <div class="game-header">
+                <h1>Sobe e Desce</h1>
+                <div class="game-info">
+                    <span>Round: <strong id="currentRound">1</strong></span>
+                    <span id="winnerDisplay" style="display:none;" class="winner-display"></span>
+                </div>
+            </div>
+
+            <!-- Current Player Section -->
+            <div class="current-player-section">
+                <h2 id="currentPlayerName">Player Name</h2>
+                <div class="score-display">
+                    <span class="score-label">Current Score:</span>
+                    <span id="currentScore" class="score-value">25</span>
+                </div>
+
+                <button id="filterToggle" class="btn-filter">Filter: OFF</button>
+
+                <div class="action-buttons">
+                    <button class="btn-action" data-action="1">-1</button>
+                    <button class="btn-action" data-action="2">-2</button>
+                    <button class="btn-action" data-action="3">-3</button>
+                    <button class="btn-action" data-action="4">-4</button>
+                    <button class="btn-action" data-action="5">-5</button>
+                    <button class="btn-lerpa" data-action="lerpa">Lerpa<br>+5</button>
+                    <button class="btn-skip" data-action="skip">Skip</button>
+                </div>
+
+                <button id="resetGameBtn" class="btn-secondary">New Game</button>
+            </div>
+
+            <!-- Leaderboard Section -->
+            <div class="leaderboard-section">
+                <h3>Game History</h3>
+                <div class="leaderboard-scroll">
+                    <table id="leaderboard" class="leaderboard-table">
+                        <thead>
+                            <tr id="headerRow">
+                                <th>Round</th>
+                            </tr>
+                        </thead>
+                        <tbody id="leaderboardBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+{
+  "name": "sobe-e-desce",
+  "version": "1.0.0",
+  "description": "Game Score Tracker - Sobe e Desce",
+  "main": "desktop/main.js",
+  "homepage": "./",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "electron .",
+    "backend": "node backend/server.js",
+    "build": "electron-builder"
+  },
+  "keywords": [
+    "game",
+    "score",
+    "tracker"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^4.22.1"
+  },
+  "devDependencies": {
+    "electron": "^27.0.0",
+    "electron-builder": "^24.6.4"
+  },
+  "build": {
+    "appId": "com.sobedesce.app",
+    "productName": "Sobe e Desce",
+    "files": [
+      "backend/**/*",
+      "frontend/**/*",
+      "desktop/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
+  }
+}
