@@ -2,7 +2,7 @@
   "name": "sobe-e-desce",
   "version": "1.0.0",
   "description": "Game Score Tracker - Sobe e Desce",
-  "main": "desktop/main.js",
+  "main": "backend/server.js",
   "homepage": "./",
   "scripts": {
     "start": "node backend/server.js",
