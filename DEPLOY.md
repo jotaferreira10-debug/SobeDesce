@@ -29,6 +29,8 @@ git push -u origin main
    - **Plan**: Free (0.50 GB RAM)
 5. Click **Deploy**
 
+Important: do not use `npm run desktop`, `npm run dev`, or `node desktop/main.js` on Render. Electron is only for the local desktop app; Render must start the Express web server with `node backend/server.js`.
+
 ### 3. Access Your App
 
 Once deployed, you'll get a URL like:
@@ -58,6 +60,13 @@ npm start
 ```
 
 Then visit `http://localhost:5000`
+
+## Running Locally for Desktop
+
+```bash
+npm install
+npm run desktop
+```
 
 ## Notes
 
